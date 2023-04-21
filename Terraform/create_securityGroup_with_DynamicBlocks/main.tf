@@ -55,6 +55,6 @@ resource "aws_security_group" "web" {
 
   tags = {
     Name  = "Dynamic Block SG by Terraform"
-    Owner = "Denis Astahov"
+    Owner = "lana1010"
   }
 }
