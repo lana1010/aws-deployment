@@ -1,0 +1,7 @@
+# helm repo add bitnami https://charts.bitnami.com/bitnami
+# helm install website bitnami/python -f mywebpage.yaml
+
+cloneHtdocsFromGit:
+     enabled   : true
+     repository: https://github.com/lana1010/flask_simple
+     branch    : main

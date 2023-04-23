@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: lana-single-pod-service-3
+  labels:
+    env  : prod
+    owner: lana
+spec:
+  selector:
+    project: aws-helm-3    # Selecting PODS with those Labels
+  ports:
+    - name      : app-listener-3
+      protocol  : TCP
+      port      : 80  # Port on Load Balancer
+      targetPort: 80  # Port on POD
+  type: LoadBalancer

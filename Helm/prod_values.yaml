@@ -1,0 +1,5 @@
+# My Custom values for Helm Chart
+container:
+  image: sqlhub/1html:v3
+
+replicaCount: 4

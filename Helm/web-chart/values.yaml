@@ -1,0 +1,6 @@
+# Default Values for my Helm Chart
+
+container:
+  image: sqlhub/1html:latest
+
+replicaCount: 2

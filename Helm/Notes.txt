@@ -1,0 +1,19 @@
+==============================================
+        Helm commands used
+==============================================
+
+helm version
+helm list
+
+helm search hub           - show Helm Chart from common Hub list
+helm search repo          - show Helm Chart from added repo
+
+helm create web-chart
+helm package web-chart    - package into tzg
+
+helm istall app2 web-chart-0.1.0.tgz - deploy Helm Chart app2 from package
+helm delete app1
+helm uninstall app1
+
+helm repo add bitnami https://charts.bitnami.com/bitnami  - add the Bitnami repository to Helm
+helm install website bitnami/python -f mywebpage.yaml     - install Helm Chart bitnami/python with my vaeiables

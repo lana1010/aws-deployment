@@ -1,0 +1,21 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: helm-web-deployment-1
+  labels:
+    app : helm-k8s-deployment-1
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      project: aws-helm-1
+  template:
+    metadata:
+      labels:
+        project: aws-helm-1   # Service will look for those PODS Labels!!!
+    spec:
+      containers:
+        - name : webserver-1
+          image: sqlhub/1html:latest
+          ports:
+            - containerPort: 80
